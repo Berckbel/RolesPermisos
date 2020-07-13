@@ -33,7 +33,7 @@
                                     @endcan
 
                                     @can('products.edit')
-                                    <td><a href="{{ route('products.edit', $product->id) }}" class="btn btn-sm btn-outline-secondary">Ver</a></td>
+                                    <td><a href="{{ route('products.edit', $product->id) }}" class="btn btn-sm btn-outline-secondary">Editar</a></td>
                                     @endcan
 
                                     @can('products.destroy')

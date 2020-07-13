@@ -50,7 +50,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('products.show', compact($product));
+        return view('products.show', compact('product'));
     }
 
     /**
@@ -61,7 +61,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.edit', compact($product));
+        return view('products.edit', compact('product'));
     }
 
     /**
@@ -89,6 +89,6 @@ class ProductController extends Controller
     {
         $product->delete();
 
-        return redirect('info','Producto eliminado correctamente');
+        return back()->with('info','Producto eliminado correctamente');
     }
 }
