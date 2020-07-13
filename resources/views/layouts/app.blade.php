@@ -86,19 +86,20 @@
             </div>
         </nav>
 
-        @if (session('info'))
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="alert alert-success">
-                            {{ session('info') }}
+        <main class="py-4">
+
+            @if (session('info'))
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="alert alert-success">
+                                {{ session('info') }}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        @endif
+            @endif
 
-        <main class="py-4">
             @yield('content')
         </main>
     </div>
