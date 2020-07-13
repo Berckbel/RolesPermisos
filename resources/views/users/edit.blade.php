@@ -9,7 +9,7 @@
                 <div class="card-header">Usuario</div>
 
                 <div class="card-body">
-                    {!! Form::model($user, ['route'=>['products.update', $user->id],
+                    {!! Form::model($user, ['route'=>['users.update', $user->id],
                     'method'=>'PUT']) !!}
 
                         @include('users.partials.form')

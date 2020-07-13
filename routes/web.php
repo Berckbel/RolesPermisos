@@ -73,14 +73,8 @@ Route::middleware('auth')->group(function(){
 
 //-----------------------------------------Users---------------------------------------------
 
-    Route::post('users/store', 'UserController@store')->name('users.store')
-                ->middleware('can:users.create');
-
     Route::get('users', 'UserController@index')->name('users.index')
                 ->middleware('can:users.index');
-
-    Route::get('users/create', 'UserController@create')->name('users.create')
-                ->middleware('can:users.create');
 
     Route::put('users/{user}', 'UserController@update')->name('users.update')
                 ->middleware('can:users.edit');
